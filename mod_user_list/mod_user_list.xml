@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+    <name>MOD_USER_LIST</name>
+    <author>Tekdi Assignment 2</author>
+    <version>1.0.0</version>
+    <description>Displays a list of users from selected user groups with optional display fields.</description>
+
+    <files>
+        <filename module="mod_user_list">mod_user_list.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="Basic Settings">
+                <field
+                    name="userlist"
+                    type="usergrouplist"
+                    label="Select User Groups"
+                    description="Choose User Groups to display."
+                    multiple="true"
+                    required="false"
+                />
+
+                <field
+                    name="show_fullname"
+                    type="radio"
+                    label="Show Full Name"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field
+                    name="show_username"
+                    type="radio"
+                    label="Show Username"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field
+                    name="show_email"
+                    type="radio"
+                    label="Show Email Address"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field
+                    name="show_registration_date"
+                    type="radio"
+                    label="Show Registration Date"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field
+                    name="show_last_login"
+                    type="radio"
+                    label="Show Last Login Date"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field
+                    name="show_user_group"
+                    type="radio"
+                    label="Show User Group"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
