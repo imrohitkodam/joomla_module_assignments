@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+    <name>MOD_CUSTOMMODULE</name>
+    <author>Tekdi Assignment 1</author>
+    <version>1.0.0</version>
+    <description>Your custom module description here</description>
+
+    <files>
+        <filename module="mod_custommodule">mod_custommodule.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="Basic Settings">
+                <field name="message" type="text" label="Enter your message" />
+
+                <!-- Add a multiple-category selection field -->
+                <field
+                    name="categories"
+                    type="category"
+                    label="Select Categories"
+                    description="Choose categories to display articles from."
+                    extension="com_content"
+                    multiple="true"
+                    required="false"
+                />
+
+                <field
+                    name="show_featured"
+                    type="list"
+                    label="Show Only Featured Articles"
+                    default="1"
+                >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
